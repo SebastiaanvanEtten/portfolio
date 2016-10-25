@@ -13,28 +13,28 @@
             msg = "   "+msg+"";    
             var le = msg.length;
             if(rev == "fwd"){ 
-            if(pos < le){ 
-                pos = pos+1; 
-                scroll = msg.substr(0,pos); 
-                document.title = scroll; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            } else { 
-                rev = "bwd"; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            }
-        } else { 
-            if(pos > 0) {
-                pos = pos-1; 
-                var ale = le-pos; 
-                scrol = msg.substr(ale,le); 
-                document.title = scrol; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            } else { 
-                rev = "fwd"; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            }
-        }
-    }
+				if(pos < le){ 
+					pos = pos+1; 
+					scroll = msg.substr(0,pos); 
+					document.title = scroll; 
+					timer = window.setTimeout("titlebar("+pos+")",speed); 
+				} else { 
+					rev = "bwd"; 
+					timer = window.setTimeout("titlebar("+pos+")",speed); 
+				}
+			} else { 
+				if(pos > 0) {
+					pos = pos-1; 
+					var ale = le-pos; 
+					scrol = msg.substr(ale,le); 
+					document.title = scrol; 
+					timer = window.setTimeout("titlebar("+pos+")",speed); 
+				} else { 
+					rev = "fwd"; 
+					timer = window.setTimeout("titlebar("+pos+")",speed); 
+				}
+			}
+			}
     titlebar(0);
 </script>
 </head>
@@ -93,13 +93,14 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	color:white;
+	border-right-color: #76A1DC;
 }
 #option:hover {
 	background-position: 0 -100%;
+	transition: 0.3s;
 	color:#76A1DC;
 	border-right-style: solid;
-	border-right-color: #76A1DC;
-	border-right-width: 5px;
+	border-right-width: 6px;
 	
 }
 #option:active {
@@ -142,6 +143,7 @@ body {
 }
 a {
 text-decoration: none;
+color: #76A1DC;
 }
 </style>
 
@@ -197,8 +199,11 @@ text-decoration: none;
 				<div id="option">2019-2020</div>
 			</a>
 		</div>
-		<div id="main" style="text-align:center;font-size:20px">
-			<br><br>deze pagina is nog niet toegevoegd
+		<div id="main" style="text-align:left;font-size:30px">
+			<br>
+			<div style="margin-left:15px;">
+				<img src="mail.jpg" height="30px" /> email:<a href="mailto:vanettensebastiaan@gmail.com">vanettensebastiaan@gmail.com</a>
+			</div>
 		</div>
 	</div>
 	</center>

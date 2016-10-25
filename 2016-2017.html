@@ -1,5 +1,43 @@
 <html>
-<head></head>
+<head>
+	<title>heyehy</title>
+	<link rel="SHORTCUT ICON" href="icon.ico" type="image/ico" />
+        <link rel="ICON" href="icon.ico" type="image/ico" />
+        <script language=javascript>
+            var rev = "fwd";
+            function titlebar(val){
+            var msg  = "Portfolio sebastiaan";
+            var res = " ";
+            var speed = 150;
+            var pos = val;
+            msg = "   "+msg+"";    
+            var le = msg.length;
+            if(rev == "fwd"){ 
+            if(pos < le){ 
+                pos = pos+1; 
+                scroll = msg.substr(0,pos); 
+                document.title = scroll; 
+                timer = window.setTimeout("titlebar("+pos+")",speed); 
+            } else { 
+                rev = "bwd"; 
+                timer = window.setTimeout("titlebar("+pos+")",speed); 
+            }
+        } else { 
+            if(pos > 0) {
+                pos = pos-1; 
+                var ale = le-pos; 
+                scrol = msg.substr(ale,le); 
+                document.title = scrol; 
+                timer = window.setTimeout("titlebar("+pos+")",speed); 
+            } else { 
+                rev = "fwd"; 
+                timer = window.setTimeout("titlebar("+pos+")",speed); 
+            }
+        }
+    }
+    titlebar(0);
+</script>
+</head>
 
 <style>
 #header {
@@ -55,13 +93,14 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	color:white;
+	border-right-color: #76A1DC;
 }
 #option:hover {
 	background-position: 0 -100%;
+	transition: 0.3s;
 	color:#76A1DC;
 	border-right-style: solid;
-	border-right-color: #76A1DC;
-	border-right-width: 5px;
+	border-right-width: 6px;
 	
 }
 #option:active {
@@ -190,7 +229,7 @@ text-decoration: none;
 	<a href="index.html">
 		<div id="homebut"></div>
 	</a>
-	<a href="leeg.html">
+	<a href="contact.html">
 		<div id="sidebut" style="margin-top:-80px;float:right">contact</div>
 	</a>
 </center>
@@ -217,7 +256,7 @@ text-decoration: none;
 			</a> <div style="height:5px"></div>
 			
 			<a href="2016-2017.html">
-				<div id="option" style="border-right-style: solid;border-right-color: #76A1DC;border-right-width: 5px;">2016-2017</div>
+				<div id="option" style="border-right-style: solid;border-right-color: #76A1DC;border-right-width: 6px;">2016-2017</div>
 			</a> <div style="height:5px"></div>
 			
 			<a href="leeg.html">
