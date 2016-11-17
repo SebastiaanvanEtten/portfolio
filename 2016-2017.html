@@ -405,7 +405,7 @@ text-decoration: none;
 			<span style="font-size:30px">Het totaal plaatje:</span><br>
 			<img src="pic/tp.png" style="width:50%">
 			<br><br><br><br><br><br><br>
-			<span style="font-size:30px">Als u geïnteresseerd bent in het spel kunt u </span><a href="handleiding.docx" id="name" style="font-size:30px" download>hier</a><span style="font-size:30px"> de handleiding/spelregels downloaden.</span>
+			<span style="font-size:30px">Als u geïnteresseerd bent in het spel kunt u </span><a href="Handleiding.docx" id="name" style="font-size:30px" download>hier</a><span style="font-size:30px"> de handleiding/spelregels downloaden.</span>
 			<br><br><br>
 			</center>
 		</p>
@@ -415,7 +415,137 @@ text-decoration: none;
 	<div>
 		<a href="#close" title="Close" class="close"><span style="margin-left:5px">X</span></a>
 		<h2>Opdrachten periode 1 Development</h2>
-		<p>dach t nie job!<br>
+		<p> In periode 1 heb ik les gehad in de taal python. Dit is overigens ook mijn aller eerste programmeertaal die ik geleerd heb. <br>
+		Na elke les kregen we opdrachten mee naar huis om te oefenen. Hier zal ik enkele opdrachten laten zien die ik gemaakt heb.<br>
+		Aan het eind van de 6 weken werden alle opdrachten beoordeeld waarvoor je één cijfer kreeg. Het door mij behaalde cijfer was een 7, Het gemiddelde van alle 265 deelnemers was een 4.26 oei...
+		<br><br>
+		<center><div style="width:90%;height:2px;background-color:#6C6F75"></div></center><br>
+		<b>Opdracht:</b> De opdracht was om een programma te schrijven die een wachtwoord kan beoordelen. Je programma moest zeggen of iemands wachtwoord slecht, redelijk of goed is.<br>
+		<b>Taal:</b> python<br>
+		<b>Uitleg:</b> Ik heb ervoor gekozen om een programma te schijven die één voor één de letters doorgaat van het ingevoerde woord. Elke letter wordt dan beoordeeld op wat het is. Uiteindelijk worden deze beoordelingen bij elkaar opgeteld en komt er een score uit.<br>	
+			<pre style="font-size:15px">
+x = str(input("voer wachtwoord in:"))
+count = 0
+countlower = 0
+counthigher = 0
+countgetal = 0
+countspace = 0
+countspec = 0
+cijfers = "0123456789"
+special = ",.!@#~$%^&*()-_=+[{]};:'<>?"
+while count < len(x):
+    y = x[count]
+    if y in cijfers:
+        countgetal += 1
+    elif y in special:
+        countspec += 1
+    elif y == " ":
+        countspace += 1
+    elif y == y.lower():
+        countlower += 1
+    elif y == y.upper():
+        counthigher += 1
+    count += 1
+score = countlower + counthigher*1.7 + countgetal*1.9 + countspace*2.6 + countspec*3
+if score < 10:
+    print("slecht")
+elif score < 30:
+    print("medium")
+elif score > 30:
+    print("noice!")
+print("je score is:",("%.2f") % score)
+			</pre>
+			<center><div style="width:90%;height:2px;background-color:#6C6F75"></div></center>
+			
+			
+			<br><br><br>
+		<b>Opdracht:</b> Bij deze opdracht was het de bedoeling dat je de gebruiker om een input vroeg, dat kan van alles zijn. Deze input moest je achterstevoren, op één lijn, laten printen.<br>
+		<b>Taal:</b> python<br>
+		<b>Uitleg:</b> Ach ja... hier kan ik weinig over vertellen, het doet wat die moet doen.<br>
+		<pre style="font-size:15px">
+x = str(input("voer hier iets in: "))
+add = ""
+count = 1
+while count < len(x)+1:
+    y = x[-count]
+    add += y
+    count += 1
+print(add)
+			</pre>
+			<center><div style="width:90%;height:2px;background-color:#6C6F75"></div></center>
+			
+			
+			<br><br><br>
+		<b>Opdracht:</b> Bij deze opdracht moesten we de temperatuur van celcius naar kelvin laten omreken. Ook moesten we de code idiot-proof maken door het programma feedback te laten geven als de gebruiker een getal invoerde dat niet mogelijk is.<br>
+		<b>Taal:</b> python<br>
+		<b>Uitleg:</b> /<br>
+		<pre style="font-size:15px">
+def vraag():
+    cels = float(input("voer hier de warmte in celsius in:"))
+    kelv = 273.16 + cels
+    if cels <= -273.15:
+        print("de minimale temperatuur kan maar -273.15 zijn, probeer het nog eens")
+        vraag()
+    else:
+        print(cels, "graden celsius is", ("%.2f" % kelv), "graden kelvin")
+vraag()
+			</pre>
+			<center><div style="width:90%;height:2px;background-color:#6C6F75"></div></center>
+			
+			
+			<br><br><br>
+		<b>Opdracht:</b> Dit is de eerste opdracht waarbij het opeens een stukje moeilijker werd dan de vorige. Bij deze opdracht moesten we een programma maken die een bericht kon encrypten. Het was de bedoelingen dan alle letters, hoofdletter of klein, met 5 werden verzet. Alle getallen en speciale tekens moesten onaangetast blijven. En om het af te maken mocht je maar één keer 'print()' gebruiken in je code.  <br>
+		<b>Taal:</b> python<br>
+		<b>Uitleg:</b> Bij deze opdracht was het even nadenken hoe je het voor elkaar gaat krijgen, want je moet rekening houden met de acscii tabel. Je moet eerst weten op welke plek je letter staat in de acscii tabel en dan kan je het vijf stappen verschuiven.
+		Het probleem waar ik eerst tegenop liep was dat ik de letters over hun bereik liet gaan, dus soms werden kleine letters hoofdletters en andersom ook. Erger nog, soms kwamen er uit het niets onbekende tekens tussen staan. Dat had ik weten te voorkomen door een
+		bereik te geven aan de letters. Alle hoofdletters bleven vast tussen de 65-90 en de kleine letters bleven tussen de 97-122. Hieronder staat de uiteindelijke code die ik ingeleverd heb.<br>
+		<pre style="font-size:15px">
+x = input("voer wat in:")
+y = int(input("verplaats met hoeveelheid:")) %26
+output = ""
+lijst = "!@#$%^&*()_-+=]}[{';:,./?><0123456789 "
+for i in x:
+    a = ord(i) + y
+    if i in lijst:
+        output += i
+    else:
+        if ord(i) >= 65 and ord(i) <=90:
+            if a > 90:
+                a = a - 26
+            elif a < 65:
+                a = a + 26
+        elif ord(i) >= 97 and ord(i) <= 122:
+            if a > 122:
+                a = a - 26
+            elif a < 97:
+                a = a + 26
+        b = chr(a)
+        output += b
+print(output)
+			</pre>
+			<center><div style="width:90%;height:2px;background-color:#6C6F75"></div></center>
+			
+			
+			<br><br><br>
+		<b>Opdracht:</b> Bij deze opdracht was het de bedoeling dat je een rondje maakt van tekens. Er waren bepaalde regels waaraan je code moest voldoen: je mag geen string met een getal vermenigvuldigen, je code mag maar één 'print()' bevatten, er MOET minstens één loop in je code, het rondje moet schaalbaar zijn op verschillende afmetingen en je mag alleen gebruik maken van 'math.sqrt' om het rondje te maken.<br>
+		<b>Taal:</b> python<br>
+		<b>Uitleg:</b> Bij deze code creëer ik eerst een raster. Vervolgens bereken ik een rondje, alles wat binnen dat rondje valt krijgt een '#'. De rest wordt opgevuld met een spatie.<br>
+		<pre style="font-size:15px">
+import math
+inp = int(input("grootte:"))
+output = ""
+straal = inp/2
+for y in range(inp):
+    for x in range(inp):
+        distance = math.sqrt(((straal - x)**2) + ((straal - y)**2))
+        if distance < straal:
+            output += "#"
+        else:
+            output += " "
+    output += "\n"
+print(output)
+			</pre>
+			<center><div style="width:90%;height:2px;background-color:#6C6F75"></div></center>
 		</p>
 	</div>
 </div>
