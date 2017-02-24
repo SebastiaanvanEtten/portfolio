@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>heyehy</title>
+	<title>Portfolio Sebastiaan van Etten</title>
 	<link rel="SHORTCUT ICON" href="icon.ico" type="image/ico" />
         <link rel="ICON" href="icon.ico" type="image/ico" />
         <script language=javascript>
@@ -40,314 +40,90 @@
 </head>
 
 <style>
-#header {
-	width:100%;
-	height:100px;
-	background-color:#54565C;
-	position:fixed;
-	box-shadow:10px 0px 20px rgba(0,0,0,0.3);
-	margin-top: -120px;
-	z-index:999;
-	text-align:center;
-	font-size:55px;
-	color:white;
-	line-height:85px;
-}
-#mainwindow {
-	width:1100px;
-	height:100%;
-}
-#menu{
-	width:350px;
-	height:100%;
-	position:fixed;
-	margin-left: -170px;
-	margin-top: -20px;
-}
-#main{
-	width:900px;
-	height:815px;
-	box-shadow:0px 0px 30px rgba(0,0,0,0.5);
-	margin-top: 120px;
-	margin-left:200px;
-	background-color:rgba(255,255,255,0.8);
-}
+@font-face { font-family: afont; src: url('afont.WOFF'); } 
 body {
 	margin-top: 0px;
-	margin-right: 1px;
-	margin-bottom: 1px;
-	margin-left: 1px;
-	background-color:#6C6F75;
-	font-family:arial;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:afont;
 }
-#option {
-	background-image: url(gtaforest.jpg);
-	width:350px;
-	height:10%;
-	background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, #54565C 50%, #46484E 50%);
-    transition: background-position 0.4s;
+#navbar {
+	width:100%;
+	height:0%;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.23));
+	position:fixed;
+	overflow:hidden;
+	font-size: 2vh;
+}
+#bg {
+	background-image: url(mainbackground.png);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+	height:100%;
+	box-shadow: 0px 12px 40px black;
+}
+#tabopt {
+	width:21%;
+	display: inline-block;
+	position: relative;
+	background-color:rgba(49,169,255,0.6);
+	float:left;
+	color:white;
+	font-size:1.7vw;
 	text-align:center;
-	font-size:3.5vh;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+	word-break:break-all;
+	border-radius: 3%;
+	transition: 0.2s ease;
+	line-height:325%;
+}
+#tabopt:after {
+	padding-top: 4%;
+	display: block;
+	content: '';
+}
+#tabopt:hover {
+	background-color:rgba(121,199,255,0.8);
 	color:white;
-	border-right-color: #76A1DC;
-}
-#option:hover {
-	background-position: 0 -100%;
-	transition: 0.3s;
-	color:#76A1DC;
-	border-right-style: solid;
-	border-right-width: 6px;
-	
-}
-#option:active {
-	background-image: linear-gradient(to bottom, #54565C 50%, #3B3D42 50%);
-	border-right-color:#97C3FF;
-	color:#97C3FF;
-}
-#homebut {
-	background-image:url(ban.png);
-	width:80px;
-	height:80px;
-	margin-top:10px;
-	transition: 0.15s ease;
-}
-#homebut:hover {
-	background-image:url(banac.png);
-	transition: 0.15s ease;
-}
-::-webkit-scrollbar {
-    width: 12px;
-}
-::-webkit-scrollbar-track {
-    background-color: #54565C;
-    border-left: 1px solid #76A1DC;
-}
-::-webkit-scrollbar-thumb {
-    background-color: rgba(255,255,255,0.8);
-}
-::-webkit-scrollbar-thumb:active {
-  background-color: #76A1DC;
-}
-#sidebut {
-	width:300px;
-	font-size:28px;
-	color:white;
-}
-#sidebut:hover {
-	color:#76A1DC;
-}
-#sidebut:active {
-	color:#97C3FF;
-}
-a {
-text-decoration: none;
-}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 1s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 34px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 1s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: 0.88} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: 0.88} 
-  to {opacity: 1}
-}
-#pic {
-width:95%;
-transition: box-shadow 280ms ease;
-transition: box-shadow 280ms ease;
-}
-#pic:hover {
-box-shadow: 0px 0px 30px black;
-transition: box-shadow 280ms ease;
-transition: box-shadow 280ms ease;
+	transition: 0.4s ease;
 }
 </style>
 
 
 <body>
-<div id="header">
-<center>
-	<a href="overdewebsite.html">
-		<div id="sidebut" style="float:left;">over de website</div>
-	</a>
-	<a href="">
-		<div id="homebut"></div>
-	</a>
-	<a href="contact.html">
-		<div id="sidebut" style="margin-top:-80px;float:right">contact</div>
-	</a>
-</center>
-<div style="width:100%;height:3px;background-color:#76A1DC;margin-top:10px;"></div>
-</div>
-	<center>
-	<div id="mainwindow">
-		<div id="menu">
-			<div style="height:20px"></div>
-			<a href="">
-				<div id="option" style="border-right-style: solid;border-right-color: #76A1DC;border-right-width: 6px;">Home</div>
-			</a> <div style="height:5px"></div>
-			
-			<a href="overmij.html">
-				<div id="option">Over mij</div>
-			</a> <div style="height:5px"></div>
-			
-			<a href="">
-				<div id="option">Mijn doelen</div>
-			</a> <div style="height:5px"></div>
-			
-			<a href="2016-2017.html">
-				<div id="option">Eerste jaar</div>
-			</a> <div style="height:5px"></div>
-			
-			<a href="leeg.html">
-				<div id="option">Tweede jaar</div>
-			</a> <div style="height:5px"></div>
-			
-			<a href="leeg.html">
-				<div id="option">Derde jaar</div>
-			</a> <div style="height:5px"></div>
-			
-			<a href="leeg.html">
-				<div id="option">Vierde jaar</div>
-			</a>
-		</div>
-		<div id="main">
-			<br>
-			<span style="font-size:50px">Home</span><br><br>
-			<center><div style="width:90%;height:2px;background-color:#6C6F75"></div></center>
-			<br><br>
-			<center>
-				<div class="slideshow-container">
-					<a href="2016-2017.html#openModal1">
-					  <div class="mySlides fade">
-						<div class="numbertext">1 / 3</div>
-						<img src="img1.jpg" id="pic">
-						<div class="text">beschrijving 1</div>
-					  </div>
-					</a>
-					<a href="overdewebsite.html">
-					  <div class="mySlides fade">
-						<div class="numbertext">2 / 3</div>
-						<img src="img2.jpg" id="pic">
-						<div class="text">beschrijving 2</div>
-					  </div>
-					</a>
-					<a href="2016-2017.html#openModal2">
-					  <div class="mySlides fade">
-						<div class="numbertext">3 / 3</div>
-						<img src="img3.jpg" id="pic">
-						<div class="text">beschrijving 3</div>
-					  </div>
-					</a>
+	<div id="bg">
+		<div style="height:15%;font-size:0px">a</div>
+		<span style="margin-left:13vw;color:white;font-size:8.5vw;transition: 0.4s ease">Portfolio</span><br>
+		<span style="margin-left:27vw;font-style:italic;color:#31a9ff;font-size:6.2vw;transition: 0.4s ease">Sebastiaan van Etten</span>
+		<center>
+			<div style="width:60%;margin-top:14vh">
+				<a href="">
+					<div>
+						<div id="tabopt">LinkedIn</div>
+						<div style="width:5%;background-color:rgba(0,0,0,0);float:left;font-size:1px;color:rgba(0,0,0,0)"> a </div>
 					</div>
-
-<br>
-				<div style="text-align:center">
-				  <span class="dot" onclick="currentSlide(1)"></span> 
-				  <span class="dot" onclick="currentSlide(2)"></span> 
-				  <span class="dot" onclick="currentSlide(3)"></span> 
-				</div>
-				<br><br> Welkom bericht ()
-			</center>
-		</div>
+				</a>
+				<a href="home.html">
+					<div>
+						<div id="tabopt">School werk</div>
+						<div style="width:5%;background-color:rgba(0,0,0,0);float:left;font-size:1px;color:rgba(0,0,0,0)"> a </div>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<div id="tabopt">Eigen werk</div>
+						<div style="width:5%;background-color:rgba(0,0,0,0);float:left;font-size:1px;color:rgba(0,0,0,0)"> a </div>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<div id="tabopt">Contact</div>
+					</div>
+				</a>
+			</div>
+		</center>
 	</div>
-	</center>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1} 
-    slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides, 4500);
-}
-</script>
 </body>
 </html>
