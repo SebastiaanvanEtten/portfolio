@@ -1,129 +1,169 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-	<title>Portfolio Sebastiaan van Etten</title>
-	<link rel="SHORTCUT ICON" href="icon.ico" type="image/ico" />
-        <link rel="ICON" href="icon.ico" type="image/ico" />
-        <script language=javascript>
-            var rev = "fwd";
-            function titlebar(val){
-            var msg  = "Portfolio sebastiaan";
-            var res = " ";
-            var speed = 150;
-            var pos = val;
-            msg = "   "+msg+"";    
-            var le = msg.length;
-            if(rev == "fwd"){ 
-            if(pos < le){ 
-                pos = pos+1; 
-                scroll = msg.substr(0,pos); 
-                document.title = scroll; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            } else { 
-                rev = "bwd"; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            }
-        } else { 
-            if(pos > 0) {
-                pos = pos-1; 
-                var ale = le-pos; 
-                scrol = msg.substr(ale,le); 
-                document.title = scrol; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            } else { 
-                rev = "fwd"; 
-                timer = window.setTimeout("titlebar("+pos+")",speed); 
-            }
-        }
-    }
-    titlebar(0);
-</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" charset="UTF-8" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="Stijl.css">
 </head>
-
-<style>
-@font-face { font-family: afont; src: url('afont.WOFF'); } 
-body {
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	font-family:arial;
-}
-#navbar {
-	width:100%;
-	height:0%;
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.23));
-	position:fixed;
-	overflow:hidden;
-	font-size: 2vh;
-}
-#bg {
-	background-image: url(mainbackground.png);
-    	background-size:     cover;
-    	background-repeat:   no-repeat;
-    	background-position: center center;
-	height:100%;
-	box-shadow: 0px 12px 40px black;
-}
-#tabopt {
-	width:21%;
-	display: inline-block;
-	position: relative;
-	background-color:rgba(49,169,255,0.6);
-	float:left;
-	color:white;
-	font-size:1.7vw;
-	text-align:center;
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
-	word-break:break-all;
-	border-radius: 3%;
-	transition: 0.2s ease;
-	line-height:325%;
-}
-#tabopt:after {
-	padding-top: 4%;
-	display: block;
-	content: '';
-}
-#tabopt:hover {
-	background-color:rgba(121,199,255,0.8);
-	color:white;
-	transition: 0.4s ease;
-}
-</style>
-
-
 <body>
-	<div id="bg">
-		<div style="height:15%;font-size:0px">a</div>
-		<span style="margin-left:13vw;white-space: nowrap;color:white;font-size:8.5vw;transition: 0.4s ease">Portfolio</span><br>
-		<span style="margin-left:27vw;white-space: nowrap;font-style:italic;color:#31a9ff;font-size:6.2vw;transition: 0.4s ease">Sebastiaan van Etten</span>
-		<center>
-			<div style="width:60%;margin-top:14vh">
-				<a href="">
-					<div>
-						<div id="tabopt">LinkedIn</div>
-						<div style="width:5%;background-color:rgba(0,0,0,0);float:left;font-size:1px;color:rgba(0,0,0,0)"> a </div>
-					</div>
-				</a>
-				<a href="home.html">
-					<div>
-						<div id="tabopt">School werk</div>
-						<div style="width:5%;background-color:rgba(0,0,0,0);float:left;font-size:1px;color:rgba(0,0,0,0)"> a </div>
-					</div>
-				</a>
-				<a href="">
-					<div>
-						<div id="tabopt">Eigen werk</div>
-						<div style="width:5%;background-color:rgba(0,0,0,0);float:left;font-size:1px;color:rgba(0,0,0,0)"> a </div>
-					</div>
-				</a>
-				<a href="">
-					<div>
-						<div id="tabopt">Contact</div>
-					</div>
-				</a>
-			</div>
-		</center>
-	</div>
+    <div class="main" id="main">
+        <span style="position:fixed;z-index:9999999;color:white;font-size:20px;transform:translateX(30px);background-color:black" id="homo"></span>
+        <div id='progres_bar' class="progres_bar">
+            <div id="prgrs" class="site_locator">
+
+            </div>
+        </div>
+        <div id="side_menu" class="side_menu">
+            <div class="side_menu_icon_offset">
+                <div id="menu_home" class="side_menu_icon">
+                    <img src="home.png" class="side_menu_icon_afbeelding">
+                </div>
+            </div>
+            <div class="side_menu_icon_offset">
+                <div id="menu_about" class="side_menu_icon">
+                    <img src="about.png" class="side_menu_icon_afbeelding">
+                </div>
+            </div>
+            <div class="side_menu_icon_offset">
+                <div id="menu_projects" class="side_menu_icon">
+                    <img src="projects.png" class="side_menu_icon_afbeelding">
+                </div>
+            </div>
+            <div class="side_menu_icon_offset">
+                <div id="menu_skills" class="side_menu_icon">
+                    <img src="skills.png" class="side_menu_icon_afbeelding">
+                </div>
+            </div>
+            <div class="side_menu_icon_offset">
+                <div id="menu_contact" class="side_menu_icon">
+                    <img src="contact.png" class="side_menu_icon_afbeelding">
+                </div>
+            </div>
+        </div>
+        <div id="0" class="box" >
+            <div id="up_or_down" class="smoothstyle background_config home_bg_img">
+                <div class="vertical_align">
+                    <div class="NameOffset offset-md-4">
+                        <div style="color:white;" class="BigTitle smoothstyle from_up">Portfolio</div>
+                        <div style="color:white;" class="MediumTitle smoothstyle from_right">Sebastiaan van Etten</div>
+                        <div style="color:rgb(180, 180, 180);" class="SmallTitle smoothstyle from_left">Student Developer / backend / front-end</div>
+                    </div>
+                    <center>
+                        <img src='pf.jpg' class="profiel_foto smoothstyle from_blur"/>
+                    </center>
+                    <div class="col-md-4 offset-md-4 intro_text smoothstyle from_blur">
+                        Welkom op mijn portfolio, mijn naam is Sebastiaan van Etten. Ik ben een programmeur in opleiding 
+                        aan de Hogeschool Rotterdam. Op deze website upload ik projecten 
+                        waar ik aan heb gewerkt, Zowel school projecten als eigen projecten.
+                    </div>
+                    <div class="col-md-10 offset-md-1" style="height:100px;margin-top:5rem">
+                        <div id="whiteline" style="background-color:white;width:100%;height:1px;border-radius:1rem"></div>
+                        <center>
+
+                            <span id='home'>
+                                <div id="from_left" class="header_button smoothstyle from_left">
+                                    Home
+                                </div>
+                            </span>
+                            <span id='about'>
+                                <div id="from_left" class="header_button smoothstyle from_left">
+                                    Over mij
+                                </div>
+                            </span>
+                            
+                            <span id='projects'>
+                                <div id="from_up" class="header_button smoothstyle from_down">
+                                    Projecten
+                                </div>
+                            </span>
+                            
+                            <span id='skills'>
+                                <div id="from_right" class="header_button smoothstyle from_right">
+                                    Vaardigheden
+                                </div>
+                            </span>
+                            
+                            <span id='contact'>
+                                <div id="from_right" class="header_button smoothstyle from_right">
+                                    Contact
+                                </div>
+                            </span>
+                            
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="1" class="box">
+            <div id="up_or_down" class="smoothstyle from_down background_config about_bg_img">
+                <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
+                    Over mij
+                </div>
+            </div>
+        </div>
+        <div id="2" class="box">
+            <div id="up_or_down" class="smoothstyle from_down background_config projects_bg_img">
+                <div>
+                    <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
+                        Projecten
+                    </div>
+                        <div id="carouselExampleControls" class="carousel slide carousel_size" data-ride="carousel">
+                                    
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100 carousel_image" src="gameshop1.jpg" >
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 class="carousel_title">GameShop</h3>
+                                    <p class="carousel_title">Project Webdevelopment</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 carousel_image" src="vergewijk1.jpg" >
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 class="carousel_title">Vergewijk</h3>
+                                    <p class="carousel_title">Project Data Visualisation</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 carousel_image" src="explordam1.jpg" >
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 class="carousel_title">Explordam</h3>
+                                    <p class="carousel_title">Project Multiplatform App</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="3" class="box">
+            <div id="up_or_down" class="smoothstyle from_down background_config skills_bg_img">
+                <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
+                    Vaardigheden
+                </div>
+            </div>
+        </div>
+        <div id="4" class="box">
+            <div id="up_or_down" class="smoothstyle from_down background_config contact_bg_img">
+                <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
+                    Contact
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
 </body>
 </html>
