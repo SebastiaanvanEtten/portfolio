@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="main" id="main">
-        <span style="position:fixed;z-index:9999999;color:white;font-size:20px;transform:translateX(30px);background-color:black" id="homo"></span>
+        <span style="font-family:Arial, Helvetica, sans-serif !important;position:fixed;z-index:9999999;color:white;font-size:20px;transform:translateX(30px);background-color:black" id="homo"></span>
         <div id='progres_bar' class="progres_bar">
             <div id="prgrs" class="site_locator">
 
@@ -42,17 +42,17 @@
             </div>
         </div>
         <div id="0" class="box" >
-            <div id="up_or_down" class="smoothstyle background_config home_bg_img">
+            <div class="smoothstyle background_config 0 anim_page home_bg_img">
                 <div class="vertical_align">
                     <div class="NameOffset offset-md-4">
-                        <div style="color:white;" class="BigTitle smoothstyle from_up">Portfolio</div>
-                        <div style="color:white;" class="MediumTitle smoothstyle from_right">Sebastiaan van Etten</div>
-                        <div style="color:rgb(180, 180, 180);" class="SmallTitle smoothstyle from_left">Student Developer / backend / front-end</div>
+                        <div style="color:white;" class="BigTitle smoothstyle 0 from_up">Portfolio</div>
+                        <div style="color:white;" class="MediumTitle smoothstyle 0 from_right">Sebastiaan van Etten</div>
+                        <div style="color:rgb(180, 180, 180);" class="SmallTitle 0 smoothstyle from_left">Student Developer / backend / front-end</div>
                     </div>
                     <center>
-                        <img src='pf.jpg' class="profiel_foto smoothstyle from_blur"/>
+                        <img id="pff" src='pf.jpg' class="profiel_foto smoothstyle 0 from_blur"/>
                     </center>
-                    <div class="col-md-4 offset-md-4 intro_text smoothstyle from_blur">
+                    <div class="col-md-4 offset-md-4 intro_text smoothstyle 0 from_blur">
                         Welkom op mijn portfolio, mijn naam is Sebastiaan van Etten. Ik ben een programmeur in opleiding 
                         aan de Hogeschool Rotterdam. Op deze website upload ik projecten 
                         waar ik aan heb gewerkt, Zowel school projecten als eigen projecten.
@@ -62,30 +62,30 @@
                         <center>
 
                             <span id='home'>
-                                <div id="from_left" class="header_button smoothstyle from_left">
+                                <div class="header_button smoothstyle 0 anim_left from_left">
                                     Home
                                 </div>
                             </span>
                             <span id='about'>
-                                <div id="from_left" class="header_button smoothstyle from_left">
+                                <div class="header_button smoothstyle 0 anim_left from_left">
                                     Over mij
                                 </div>
                             </span>
                             
                             <span id='projects'>
-                                <div id="from_up" class="header_button smoothstyle from_down">
+                                <div class="header_button smoothstyle 0 anim_up from_down">
                                     Projecten
                                 </div>
                             </span>
                             
                             <span id='skills'>
-                                <div id="from_right" class="header_button smoothstyle from_right">
+                                <div class="header_button smoothstyle 0 anim_right from_right">
                                     Vaardigheden
                                 </div>
                             </span>
                             
                             <span id='contact'>
-                                <div id="from_right" class="header_button smoothstyle from_right">
+                                <div class="header_button smoothstyle 0 anim_right from_right">
                                     Contact
                                 </div>
                             </span>
@@ -96,21 +96,87 @@
             </div>
         </div>
         <div id="1" class="box">
-            <div id="up_or_down" class="smoothstyle from_down background_config about_bg_img">
-                <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
-                    Over mij
+            <div class="smoothstyle 1 anim_page from_down background_config about_bg_img">
+                
+                <div class="vertical_align">
+                    <div class="BigTitle smoothstyle 1 anim_up_or_down from_up" style="text-align:center">
+                        Over mij
+                    </div>
+                    <div class="responsive_box">
+                        <div class="row">
+                            <div class="col-md-6 smoothstyle 1 anim_left from_left" style="margin: auto 0;">
+                                <div class="col-sm-8 offset-sm-2">
+                                    Mijn naam is Sebastiaan van Etten. Ik ben een <span id='schooljaar' style="font-family:Arial, Helvetica, sans-serif !important">[INSERT YEAR]</span>e jaars informatica student op de Hogeschool Rotterdam. 
+                                    <br><br>
+                                    <div class="smoothstyle 1 anim_left from_left">
+                                        Ik ben <span id='age' style="font-family:Arial, Helvetica, sans-serif !important">[INSERT AGE]</span> jaar oud en beschrijf mijzelf als een ambitieuze ontwikkelaar.
+                                    </div>
+                                    <br><br>
+                                    <div class="smoothstyle 1 anim_left from_left">
+                                        <div class="smoothstyle 1 anim_left from_left">
+                                                Naast school ben ik onder andere bezig met eigen projecten en freelance werk. Zo ben ik af en toe bezig met het maken of onderhouden van een website.
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="smoothstyle 1 anim_left from_left">
+                                        <div class="smoothstyle 1 anim_left from_left">
+                                            <div class="smoothstyle 1 anim_left from_left">
+                                                Naast dit ben ik ook actief bezig met het opdoen van ervaring tijdens mijn bijbaan als junior developer bij Idealnet.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </div>
+                            <div class="col-md-6 smoothstyle 1 anim_right from_right" style="height:100%">
+                                <div class="col-sm-10 offset-sm-1 ervaring_box_outside">
+                                    <div class="ervaring_box_title_area">
+                                        HAVO diploma,<br>
+                                        Het Lyceum Rotterdam, Natuur &#38; Techniek
+                                    </div>
+                                    <div class="ervaring_box_date">
+                                        <span style="font-family:Arial, Helvetica, sans-serif !important">2010 - 2016</span>
+                                    </div>
+                                </div>
+                                <div class="smoothstyle 1 anim_right from_right">
+                                    <div class="col-sm-10 offset-sm-1 ervaring_box_outside">
+                                            <div class="ervaring_box_title_area">
+                                                Digitale Media certificaat,<br>
+                                                Het Lyceum Rotterdam
+                                            </div>
+                                            <div class="ervaring_box_date">
+                                                <span style="font-family:Arial, Helvetica, sans-serif !important">2016</span>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="smoothstyle 1 anim_right from_right">
+                                    <div class="smoothstyle 1 anim_right from_right">
+                                        <div class="col-sm-10 offset-sm-1 ervaring_box_outside">
+                                            <div class="ervaring_box_title_area">
+                                                HBO <span style="font-family:Arial, Helvetica, sans-serif !important">1</span>e jaar Propedeuse,<br>
+                                                Hogeschool Rotterdam, informatica
+                                            </div>
+                                            <div class="ervaring_box_date">
+                                                <span style="font-family:Arial, Helvetica, sans-serif !important">2016 - 2017</span>
+                                            </div>
+                                        </div>      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="2" class="box">
-            <div id="up_or_down" class="smoothstyle from_down background_config projects_bg_img">
+            <div class="smoothstyle 2 anim_page from_down background_config projects_bg_img">
                 <div>
-                    <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
+                    <div class="BigTitle 2 anim_up_or_down smoothstyle from_up" style="text-align:center;margin: 2rem">
                         Projecten
                     </div>
                         <div id="carouselExampleControls" class="carousel slide carousel_size" data-ride="carousel">
                                     
-                        <div class="carousel-inner">
+                        <div class="carousel-inner" onclick="alert('hey... ja... de website is nog niet af. Het zal waarschijnlijk binnenkort worden toegevoegd. Komt u later nog eens terug :)')">
                             <div class="carousel-item active">
                                 <img class="d-block w-100 carousel_image" src="gameshop1.jpg" >
                                 <div class="carousel-caption d-none d-md-block">
@@ -118,20 +184,29 @@
                                     <p class="carousel_title">Project Webdevelopment</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item" onclick="alert('hey... ja... de website is nog niet af. Het zal waarschijnlijk binnenkort worden toegevoegd. Komt u later nog eens terug :)')">
                                 <img class="d-block w-100 carousel_image" src="vergewijk1.jpg" >
                                 <div class="carousel-caption d-none d-md-block">
                                     <h3 class="carousel_title">Vergewijk</h3>
                                     <p class="carousel_title">Project Data Visualisation</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item" onclick="alert('hey... ja... de website is nog niet af. Het zal waarschijnlijk binnenkort worden toegevoegd. Komt u later nog eens terug :)')">
                                 <img class="d-block w-100 carousel_image" src="explordam1.jpg" >
                                 <div class="carousel-caption d-none d-md-block">
                                     <h3 class="carousel_title">Explordam</h3>
                                     <p class="carousel_title">Project Multiplatform App</p>
                                 </div>
                             </div>
+                            <div class="carousel-item" onclick="alert('hey... ja... de website is nog niet af. Het zal waarschijnlijk binnenkort worden toegevoegd. Komt u later nog eens terug :)')">
+                                <img class="d-block w-100 carousel_image" src="mobilegame1.jpg" >
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 class="carousel_title">Mobile Game</h3>
+                                    <p class="carousel_title">Project Mobile Game</p>
+                                </div>
+                            </div>
+<!--<iframe width="1280" height="720" src="https://www.youtube.com/embed/myyNObd4Ieo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+                            
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -147,15 +222,15 @@
             </div>
         </div>
         <div id="3" class="box">
-            <div id="up_or_down" class="smoothstyle from_down background_config skills_bg_img">
-                <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
+            <div class="smoothstyle from_down 3 anim_page background_config skills_bg_img">
+                <div class="BigTitle 3 anim_up_or_down smoothstyle from_up" style="text-align:center;margin: 2rem">
                     Vaardigheden
                 </div>
             </div>
         </div>
         <div id="4" class="box">
-            <div id="up_or_down" class="smoothstyle from_down background_config contact_bg_img">
-                <div id="from_up" class="BigTitle smoothstyle from_up" style="text-align:center;margin: 2rem">
+            <div class="smoothstyle from_down 4 anim_page background_config contact_bg_img">
+                <div class="BigTitle 4 anim_up_or_down smoothstyle from_up" style="text-align:center;margin: 2rem">
                     Contact
                 </div>
             </div>
