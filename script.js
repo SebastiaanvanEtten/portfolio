@@ -4,68 +4,7 @@ window.onload = function(){
         scrollTop: $("#main").offset().top
     }, 1);
 
-    $("#home").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#0").offset().top
-        }, 1000);
-    });
-    $("#about").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#1").offset().top
-        }, 1000);
-    });
-    $("#pff").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#1").offset().top
-        }, 1000);
-    });
-
-    $("#projects").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#2").offset().top
-        }, 1000);
-    });
-    
-    $("#skills").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#3").offset().top
-        }, 1000);
-    });
-    
-    $("#contact").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#4").offset().top
-        }, 1000);
-    });
-
-    $("#menu_home").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#0").offset().top
-        }, 1000);
-    });
-    $("#menu_about").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#1").offset().top
-        }, 1000);
-    });
-
-    $("#menu_projects").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#2").offset().top
-        }, 1000);
-    });
-    
-    $("#menu_skills").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#3").offset().top
-        }, 1000);
-    });
-    
-    $("#menu_contact").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#4").offset().top
-        }, 1000);
-    });
+    configureButtons();
 
     document.getElementById('age').innerHTML = Math.floor(Math.abs(new Date() - new Date(1997,1,10))/31536000000);
     document.getElementById('schooljaar').innerHTML = Math.ceil(Math.abs(new Date()-new Date(2016,9,1))/31536000000);
@@ -75,15 +14,28 @@ window.onload = function(){
 var previous = 0;
 var page = 0;
 var MenuOpen = false;
-window.onwheel = function()
-{ 
-    if (window.innerWidth > 992){
-        return false; 
+var ScrollIsBusy = false;
+
+window.addEventListener('wheel', function(e) {
+    if (!ScrollIsBusy){
+        ScrollIsBusy = true;
+        if (e.deltaY < 0){
+            MoveToPage(page - 1);
+        }
+        else {
+            MoveToPage(page + 1);
+        }
     }
-    else {
-        return true; 
+});
+async function MoveToPage(pagenumero){
+    if (pagenumero >= 0 && pagenumero <= 4){
+        $('html, body').animate({
+            scrollTop: $("#"+pagenumero).offset().top
+        }, 1000);
     }
+    setTimeout( () => { ScrollIsBusy = false; },1000)
 }
+
 window.onscroll = function(ev){
     for (var i = 0; i < 5;i++){
         var halfwindow = window.innerHeight / 2;
@@ -108,7 +60,7 @@ window.onscroll = function(ev){
                     document.getElementById('side_menu').style.transform = 'translateX(-100px)';
                 }
             }
-            document.getElementById('homo').innerHTML = 'Page: '+page+" prev: "+previous+" | scroll: "+window.scrollY;
+            //document.getElementById('homo').innerHTML = 'Page: '+page+" prev: "+previous+" | scroll: "+window.scrollY;
             var prgrs = ((window.scrollY*100)/(main.offsetHeight*100))*100;
             document.getElementById('prgrs').style.height = 'calc('+prgrs + '% - 10px)';
         }
@@ -185,5 +137,69 @@ function highlightSideMenu(pagenumber){
             docs[i].style.opacity = '0.3';
         }
     }
+}
+function configureButtons(){
+    $("#home").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#0").offset().top
+        }, 1000);
+    });
+    $("#about").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#1").offset().top
+        }, 1000);
+    });
+    $("#pff").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#1").offset().top
+        }, 1000);
+    });
+
+    $("#projects").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#2").offset().top
+        }, 1000);
+    });
+    
+    $("#skills").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#3").offset().top
+        }, 1000);
+    });
+    
+    $("#contact").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#4").offset().top
+        }, 1000);
+    });
+
+    $("#menu_home").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#0").offset().top
+        }, 1000);
+    });
+    $("#menu_about").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#1").offset().top
+        }, 1000);
+    });
+
+    $("#menu_projects").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#2").offset().top
+        }, 1000);
+    });
+    
+    $("#menu_skills").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#3").offset().top
+        }, 1000);
+    });
+    
+    $("#menu_contact").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#4").offset().top
+        }, 1000);
+    });
 }
 

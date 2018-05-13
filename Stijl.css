@@ -257,9 +257,9 @@ body, html {
 }
 
 .responsive_box {
-    width: 1250px;
-    height: calc(1250px / 1.77777779);
-    margin-left: calc(50% - 625px);
+    width: 1350px;
+    height: calc(1350px / 1.77777779);
+    margin-left: calc(50% - 675px);
     background-color: rgba(0,0,0,0);
     border-radius: 1rem;
 }
@@ -314,9 +314,9 @@ body, html {
         transition: 0.3s ease;
     }
     .carousel_size {
-        width: 700px;
-        height: calc(700px / 1.77777778);
-        margin-left: calc(50vw - 350px);
+        width: 750px;
+        height: calc(750px / 1.77777778);
+        margin-left: calc(50vw - 375px);
         display: inline-block;
         overflow: hidden;
     }
@@ -366,8 +366,9 @@ body, html {
         position: fixed;
         z-index: 9998;
         width:80px;
-        height: 0;
+        height: 100vh;
         visibility: hidden;
+        transition: 0s;
         background-color: rgba(0, 0, 0, 0.7);
     }
     .NameOffset {
@@ -384,9 +385,9 @@ body, html {
         transition: 0.3s ease;
     }
     .carousel_size {
-        width: 50vw;
-        height: calc(50vw / 1.77777778);
-        margin-left: 25vw;
+        width: 90vw;
+        height: calc(90vw / 1.77777778);
+        margin-left: 5vw;
         display: inline-block;
         overflow: hidden;
     }
