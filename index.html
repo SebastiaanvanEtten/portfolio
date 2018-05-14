@@ -7,11 +7,14 @@
     <link rel="stylesheet" type="text/css" href="Stijl.css">
 </head>
 <body>
+    <div id="screen_overlay" style="transition:.5s;position:absolute;width:100vw;height:100vh;background-color:white;z-index:99999999">
+        <div class="loader">laden</div>
+    </div>
     <div class="main" id="main">
         <span style="font-family:Arial, Helvetica, sans-serif !important;position:fixed;z-index:9999999;color:white;font-size:20px;transform:translateX(30px);background-color:black" id="homo"></span>
+        <div style="position:fixed;z-index:9999999999;transform:translate(calc(100vw - 100px), 10px)"><span class="language_button">NL</span> / <span class="language_button">EN</span></div>
         <div id='progres_bar' class="progres_bar">
             <div id="prgrs" class="site_locator">
-
             </div>
         </div>
         <div id="side_menu" class="side_menu">
@@ -105,7 +108,7 @@
                     <div class="responsive_box">
                         <div class="row">
                             <div class="col-md-6 smoothstyle 1 anim_left from_left" style="margin: auto 0;">
-                                <div class="col-sm-8 offset-sm-2">
+                                <div class="col-md-10 offset-md-1">
                                     Mijn naam is Sebastiaan van Etten. Ik ben een <span id='schooljaar' style="font-family:Arial, Helvetica, sans-serif !important">[INSERT YEAR]</span>e jaars informatica student op de Hogeschool Rotterdam. 
                                     <br><br>
                                     <div class="smoothstyle 1 anim_left from_left">

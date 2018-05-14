@@ -1,5 +1,26 @@
-window.onload = function(){
+window.onwheel = function(){return false;};
+
+setTimeout(() => {
+    document.getElementById('screen_overlay').style.opacity = '0';
+}, 1500);
+setTimeout(() => {
     RemoveAnimElement(0,'down');
+    window.addEventListener('wheel', function(e) {
+        if (!ScrollIsBusy){
+            ScrollIsBusy = true;
+            if (e.deltaY < 0){
+                MoveToPage(page - 1);
+            }
+            else {
+                MoveToPage(page + 1);
+            }
+        }
+    });
+}, 1750);
+setTimeout(() => {
+    document.getElementById('screen_overlay').remove();
+}, 2000);
+window.onload = function(){
     $('html, body').animate({
         scrollTop: $("#main").offset().top
     }, 1);
@@ -16,17 +37,6 @@ var page = 0;
 var MenuOpen = false;
 var ScrollIsBusy = false;
 
-window.addEventListener('wheel', function(e) {
-    if (!ScrollIsBusy){
-        ScrollIsBusy = true;
-        if (e.deltaY < 0){
-            MoveToPage(page - 1);
-        }
-        else {
-            MoveToPage(page + 1);
-        }
-    }
-});
 async function MoveToPage(pagenumero){
     if (pagenumero >= 0 && pagenumero <= 4){
         $('html, body').animate({
