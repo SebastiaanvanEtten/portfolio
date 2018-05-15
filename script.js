@@ -5,17 +5,19 @@ setTimeout(() => {
 }, 1500);
 setTimeout(() => {
     RemoveAnimElement(0,'down');
-    window.addEventListener('wheel', function(e) {
-        if (!ScrollIsBusy){
-            ScrollIsBusy = true;
-            if (e.deltaY < 0){
-                MoveToPage(page - 1);
-            }
-            else {
-                MoveToPage(page + 1);
+    window.onwheel =  function(e) {
+        if (AllowedToMove) {
+            if (!ScrollIsBusy){
+                ScrollIsBusy = true;
+                if (e.deltaY < 0){
+                    MoveToPage(page - 1);
+                }
+                else {
+                    MoveToPage(page + 1);
+                }
             }
         }
-    });
+    };
 }, 1750);
 setTimeout(() => {
     document.getElementById('screen_overlay').remove();
@@ -36,6 +38,7 @@ var previous = 0;
 var page = 0;
 var MenuOpen = false;
 var ScrollIsBusy = false;
+var AllowedToMove = true;
 
 async function MoveToPage(pagenumero){
     if (pagenumero >= 0 && pagenumero <= 4){
@@ -44,38 +47,48 @@ async function MoveToPage(pagenumero){
         }, 1000);
     }
     setTimeout( () => { ScrollIsBusy = false; },1000)
-}
+} 
 
-window.onscroll = function(ev){
-    for (var i = 0; i < 5;i++){
-        var halfwindow = window.innerHeight / 2;
-        if ((window.innerHeight * i)-1 < (window.scrollY + halfwindow) && (window.scrollY + halfwindow) < (window.innerHeight * (i+1))){
-            
-            if (page != i){
-                previous = page;
-                if (i > previous){
-                    UpdateView(i,'up');
+window.onscroll = function() {
+    if (AllowedToMove) {
+        for (var i = 0; i < 5;i++){
+            var halfwindow = window.innerHeight / 2;
+            if ((window.innerHeight * i)-1 < (window.scrollY + halfwindow) && (window.scrollY + halfwindow) < (window.innerHeight * (i+1))){
+                
+                if (page != i){
+                    previous = page;
+                    if (i > previous){
+                        UpdateView(i,'up');
+                    }
+                    else {
+                        UpdateView(i,'down');
+                    }
+                    highlightSideMenu(i);
                 }
-                else {
-                    UpdateView(i,'down');
+                page = i;
+                if (window.innerWidth > 768){
+                    if (page > 0) {
+                        document.getElementById('side_menu').style.transform = 'translateX(0px)';
+                    }
+                    else {
+                        document.getElementById('side_menu').style.transform = 'translateX(-100px)';
+                    }
                 }
-                highlightSideMenu(i);
+                //document.getElementById('homo').innerHTML = 'Page: '+page+" prev: "+previous+" | scroll: "+window.scrollY;
+                var prgrs = ((window.scrollY*100)/(main.offsetHeight*100))*100;
+                document.getElementById('prgrs').style.height = 'calc('+prgrs + '% - 10px)';
             }
-            page = i;
-            if (window.innerWidth > 992){
-                if (page > 0) {
-                    document.getElementById('side_menu').style.transform = 'translateX(0px)';
-                }
-                else {
-                    document.getElementById('side_menu').style.transform = 'translateX(-100px)';
-                }
-            }
-            //document.getElementById('homo').innerHTML = 'Page: '+page+" prev: "+previous+" | scroll: "+window.scrollY;
-            var prgrs = ((window.scrollY*100)/(main.offsetHeight*100))*100;
-            document.getElementById('prgrs').style.height = 'calc('+prgrs + '% - 10px)';
         }
     }
 }
+function defectit() {
+    var modalname = document.getElementsByClassName('active')[0].children[0].dataset.target;
+    AllowedToMove = false;
+    $(modalname).on("hidden.bs.modal", function (e) {
+        AllowedToMove = true;
+    });
+}
+
 function UpdateView(i,direction){
     RemoveAnimElement(i);
     AddAnimElements(previous, direction);
