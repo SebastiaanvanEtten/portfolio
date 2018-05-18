@@ -23,6 +23,8 @@ setTimeout(() => {
     document.getElementById('screen_overlay').remove();
 }, 2000);
 window.onload = function(){
+	alert('Website is nog niet af, komt u later nog eens terug.');
+    $('[data-toggle="tooltip"]').tooltip(); 
     $('html, body').animate({
         scrollTop: $("#main").offset().top
     }, 1);
@@ -161,12 +163,33 @@ function highlightSideMenu(pagenumber){
         }
     }
 }
+
+var Dutch = true; 
+
+function Change_lang(langu) {
+    var nl = document.getElementById('dutchL');
+    var eng = document.getElementById('engL');
+    if (langu == 'nl') {
+        if (!Dutch){
+            Dutch = true;
+            nl.classList.add('HL');
+            eng.classList.remove('HL');
+            document.getElementById('text1').innerHTML = 'Welkom op mijn portfolio, mijn naam is Sebastiaan van Etten. Ik ben een programmeur in opleiding aan de Hogeschool Rotterdam. Op deze website upload ik projecten waar ik aan heb gewerkt, Zowel school projecten als eigen projecten.'
+            document.getElementById('text2').innerHTML = 'Lees meer over mij';
+        }
+    }
+    else if (langu == 'eng') {
+        if (Dutch) {
+            Dutch = false;
+            eng.classList.add('HL');
+            nl.classList.remove('HL');
+            document.getElementById('text1').innerHTML = 'Welcome to my portfolio, my name is Sebastiaan van Etten. I am currently studying computer science at the Rotterdam university of applied sciences. On this website I will be uploading projects that I have worked on, both school and personal projects.'
+            document.getElementById('text2').innerHTML = 'Read more about me';
+        }
+    }
+}
+
 function configureButtons(){
-    $("#home").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#0").offset().top
-        }, 1000);
-    });
     $("#about").click(function() {
         $('html, body').animate({
             scrollTop: $("#1").offset().top
@@ -175,18 +198,6 @@ function configureButtons(){
     $("#pff").click(function() {
         $('html, body').animate({
             scrollTop: $("#1").offset().top
-        }, 1000);
-    });
-
-    $("#projects").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#2").offset().top
-        }, 1000);
-    });
-    
-    $("#skills").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#3").offset().top
         }, 1000);
     });
     

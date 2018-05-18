@@ -1,10 +1,12 @@
 @font-face {
     font-family: "TitleFont";
     src:url("Title.ttf");
+    unicode-range: U+0041-007A;
 }
 @font-face {
     font-family: "ThinFont";
     src:url("Thin.ttf");
+    unicode-range: U+0041-007A;
 }
 .loader {
     border: 16px solid #d1d1d1;
@@ -83,7 +85,7 @@ body, html {
     margin: 0%;
     background-color:rgb(37, 37, 37);
     color:white;
-    font-family: TitleFont;
+    font-family: TitleFont, Arial, Helvetica, sans-serif;
     min-width: 768px;
 }
 body{
@@ -192,21 +194,23 @@ body{
     height:0px;
     border-radius:2rem;
 }
+
 .home_bg_img{
-    background-image: url('bg.jpg');
+    background-image: url('bg1.jpg');
 }
 .about_bg_img{
-    background-image: url('bg.jpg');
+    background-image: url('bg2.jpg');
 }
 .projects_bg_img{
-    background-image: url('bg.jpg');
+    background-image: url('bg3.jpg');
 }
 .skills_bg_img{
-    background-image: url('bg.jpg');
+    background-image: url('bg4.jpg');
 }
 .contact_bg_img{
-    background-image: url('bg.jpg');
+    background-image: url('bg5.jpg');
 }
+
 .background_config{
     width:100%;
     height: 100%;
@@ -230,14 +234,14 @@ body{
     transition: 0.3s ease;
 }
 .profiel_foto:hover {
-    transform: scale(1.25,1.25);
+    transform: scale(1.1,1.1);
     transition: 0.3s ease;
-    box-shadow: 0px 15px 15px rgba(0,0,0,0.4);
+    box-shadow: 0px 8px 10px rgba(0,0,0,0.4);
 }
 .profiel_foto:active {
-    transform: scale(1.20,1.20);
+    transform: scale(1.05,1.05);
     transition: 0.1s ease;
-    box-shadow: 0px 8px 10px rgba(0,0,0,0.4);
+    box-shadow: 0px 5px 7px rgba(0,0,0,0.4);
 }
 
 .header_button{
@@ -249,21 +253,26 @@ body{
     margin-top: 1.25rem;
     transition: 0.1s ease;
     display:inline-block;
+    animation: hover 1.25s ease infinite;
 }
 .header_button:hover {
     transition: 0.2s ease;
-    transform: translateY(-2px);
-    border-radius: 1rem;
-    background-color:rgba(255,255,255,0.025);
-    border-bottom: solid white 1px;
+    transform: translateY(8px);
     cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
 }
-.header_button:active {
-    transition: 0.05s ease;
-    transform: translateY(2px);
-    box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+
+@keyframes hover {
+    0% {
+        transform: translateY(0px);
+    }
+    35% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
+
 .BigTitle{
     font-family:"TitleFont";
     font-size:62px;
@@ -326,6 +335,26 @@ body{
     line-height:1.75rem;
     padding-left:1rem;
 }
+.Table_container {
+    width: 1350px;
+    margin: 0 auto;
+    background-color:rgba(0,0,0,0.15);
+    border-radius: 1rem;
+}
+.skill_logo {
+    height:70px;
+    filter: grayscale(75%);
+    transition: .3s ease;
+}
+.skill_logo:hover {
+    transition: .1s ease;
+    filter: grayscale(5%);
+    transform: scale(1.1,1.1);
+}
+.sql {
+    font-size: 40px;
+    font-weight: bold;
+}
 
 @media screen and (min-width : 992px) and  (max-width : 1425px) {
     /*medium*/
@@ -369,6 +398,12 @@ body{
         width: 900px;
         margin-left: calc(50% - 450px);
         background-color: rgba(0,0,0,0);
+        border-radius: 1rem;
+    }
+    .Table_container {
+        width: 900px;
+        margin: 0 auto;
+        background-color:rgba(0,0,0,0.15);
         border-radius: 1rem;
     }
 }
@@ -446,5 +481,21 @@ body{
         height:100px;
         min-width:300px;
         margin: 2rem 0;
+    }
+    .Table_container {
+        width: 760px;
+        margin: 0 auto;
+        background-color:rgba(0,0,0,0.15);
+        border-radius: 1rem;
+    }
+}
+
+.home_screen_offset_line {
+    height:100px;margin-top:5rem;
+}
+
+@media screen and (max-height: 770px) {
+    .home_screen_offset_line {
+        height:100px;margin-top:1.5rem;
     }
 }
