@@ -294,6 +294,7 @@ body{
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: .05s ease;
+    margin-top: calc(50vh - 380px);
     
 }
 .carousel_size:hover {
@@ -319,7 +320,7 @@ body{
 }
 .ervaring_box_outside {
     height:100px;
-    min-width:300px;
+    min-width: 400px;
     margin: calc(33% - 100px) 0;
 }
 .ervaring_box_title_area {
@@ -388,11 +389,12 @@ body{
         transition: 0.3s ease;
     }
     .carousel_size {
-        width: 750px;
-        height: calc(750px / 1.77777778);
-        margin-left: calc(50vw - 375px);
+        width: 800px;
+        height: calc(800px / 1.77777778);
+        margin-left: calc(50vw - 400px);
         display: inline-block;
         overflow: hidden;
+        margin-top: calc(50vh - 325px);
     }
     .responsive_box {
         width: 900px;
@@ -465,11 +467,12 @@ body{
         transition: 0.3s ease;
     }
     .carousel_size {
-        width: 90vw;
-        height: calc(90vw / 1.77777778);
-        margin-left: 5vw;
+        width: 720px;
+        height: calc(720px / 1.77777778);
+        margin-left: calc(50vw - 360px);
         display: inline-block;
         overflow: hidden;
+        margin-top: calc(50vh - 280px);
     }
     .responsive_box {
         width: calc(100% - 100px);
@@ -479,7 +482,7 @@ body{
     }
     .ervaring_box_outside {
         height:100px;
-        min-width:300px;
+        width:100%;
         margin: 2rem 0;
     }
     .Table_container {
