@@ -200,13 +200,13 @@ function Change_lang(langu) {
             document.getElementById('text14').innerHTML = 'Programmeertalen';
             document.getElementById('text15').innerHTML = 'Programmeer software';
             document.getElementById('text16').innerHTML = 'Overige software';
-            document.getElementById('text17').innerHTML = '';
-            document.getElementById('text18').innerHTML = '';
-            document.getElementById('text19').innerHTML = '';
-            document.getElementById('text20').innerHTML = '';
-            document.getElementById('text21').innerHTML = '';
-            document.getElementById('text22').innerHTML = '';
-            document.getElementById('text23').innerHTML = '';
+            // document.getElementById('text17').innerHTML = '';
+            // document.getElementById('text18').innerHTML = '';
+            // document.getElementById('text19').innerHTML = '';
+            // document.getElementById('text20').innerHTML = '';
+            // document.getElementById('text21').innerHTML = '';
+            // document.getElementById('text22').innerHTML = '';
+            // document.getElementById('text23').innerHTML = '';
         }
     }
     else if (langu == 'eng') {
@@ -230,13 +230,13 @@ function Change_lang(langu) {
             document.getElementById('text14').innerHTML = 'Programming languages';
             document.getElementById('text15').innerHTML = 'Programming software';
             document.getElementById('text16').innerHTML = 'Other software';
-            document.getElementById('text17').innerHTML = '';
-            document.getElementById('text18').innerHTML = '';
-            document.getElementById('text19').innerHTML = '';
-            document.getElementById('text20').innerHTML = '';
-            document.getElementById('text21').innerHTML = '';
-            document.getElementById('text22').innerHTML = '';
-            document.getElementById('text23').innerHTML = '';
+            // document.getElementById('text17').innerHTML = '';
+            // document.getElementById('text18').innerHTML = '';
+            // document.getElementById('text19').innerHTML = '';
+            // document.getElementById('text20').innerHTML = '';
+            // document.getElementById('text21').innerHTML = '';
+            // document.getElementById('text22').innerHTML = '';
+            // document.getElementById('text23').innerHTML = '';
         }
     }
 }
