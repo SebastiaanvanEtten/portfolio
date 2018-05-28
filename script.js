@@ -23,7 +23,6 @@ setTimeout(() => {
     document.getElementById('screen_overlay').remove();
 }, 2000);
 window.onload = function(){
-    alert('de website is nog niet af, komt u later nog eens terug');
     $('[data-toggle="tooltip"]').tooltip(); 
     $('html, body').animate({
         scrollTop: $("#main").offset().top
@@ -58,6 +57,16 @@ async function MoveToPage(pagenumero){
     }
     setTimeout( () => { ScrollIsBusy = false; },1000)
 } 
+
+window.onmousemove = function(e){
+    if (page < 1){
+        if (e.screenX < 120) {
+            document.getElementById('side_menu').style.transform = 'translateX(0px)';
+        } else {
+            document.getElementById('side_menu').style.transform = 'translateX(-100px)';
+        }
+    }
+}
 
 window.onscroll = function() {
     if (AllowedToMove) {
@@ -105,7 +114,7 @@ function UpdateView(i,direction){
 }
 function AddAnimElements(pagenum,dir){
     var targets = document.getElementsByClassName(pagenum);
-    var animations = ['up','down','left','right','blur']
+    var animations = ['up','down','left','right','blur','kitt']
     for (var i = 0; i < targets.length;i++){
         for (var k = 0;k < animations.length;k++){
             targets[i].classList.add('smoothstyle');
@@ -156,6 +165,7 @@ function RemoveAnimElement(pagenum){
         targets[i].classList.remove('from_left');
         targets[i].classList.remove('from_right');
         targets[i].classList.remove('from_blur');
+        targets[i].classList.remove('from_kitt');
 
         SmoothAddOrDel(pagenum,'del');
     }
@@ -171,9 +181,19 @@ function highlightSideMenu(pagenumber){
         }
     }
 }
-function ttt() {
-    return 'hoomooo';
+
+function reveal_info(info) {
+    var infobox = document.getElementById('telormail')
+    infobox.classList.add('from_blur');
+    infobox.innerHTML = info;
+    setTimeout(() => {
+        infobox.classList.remove('from_blur');
+        infobox.style.transition = '0.5s ease';
+    }, 50);
+    infobox.style.transition = '0.0s ease';
 }
+
+
 var Dutch = true; 
 
 function Change_lang(langu) {

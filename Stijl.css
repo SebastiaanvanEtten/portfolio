@@ -196,19 +196,19 @@ body{
 }
 
 .home_bg_img{
-    background-image: url('bg1.jpg');
+    background-image: url('backgrounds/bg1.jpg');
 }
 .about_bg_img{
-    background-image: url('bg2.jpg');
+    background-image: url('backgrounds/bg2.jpg');
 }
 .projects_bg_img{
-    background-image: url('bg3.jpg');
+    background-image: url('backgrounds/bg3.jpg');
 }
 .skills_bg_img{
-    background-image: url('bg4.jpg');
+    background-image: url('backgrounds/bg4.jpg');
 }
 .contact_bg_img{
-    background-image: url('bg5.jpg');
+    background-image: url('backgrounds/bg5.jpg');
 }
 
 .background_config{
@@ -266,7 +266,7 @@ body{
         transform: translateY(0px);
     }
     35% {
-        transform: translateY(8px);
+        transform: translateY(10px);
     }
     100% {
         transform: translateY(0px);
@@ -356,6 +356,47 @@ body{
     font-size: 40px;
     font-weight: bold;
 }
+.contact_bar {
+    margin: 0 auto;
+    width: 800px;
+    height: 120px;
+    overflow: hidden;
+}
+.contact_bar:hover {
+    overflow: visible;
+}
+
+.contact_line {
+    background-color: white;
+    margin: 0 auto;
+    height:2px;
+    border-radius: 10px;
+}
+
+.from_kitt {
+    width: 2px !important;
+}
+
+.anim_kitt {
+    width: 800px;
+}
+
+.contact_element {
+    width:100px;
+    height:100px;
+    margin: 0 50px;
+    float:left;
+    transition: 0.05s ease;
+}
+.contact_element:hover {
+    transform: scale(1.06,1.06);
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+.contact_element:active {
+    transform: scale(.98,.98);
+    transition: 0.05s ease;
+}
 
 @media screen and (min-width : 992px) and  (max-width : 1425px) {
     /*medium*/
@@ -407,6 +448,21 @@ body{
         margin: 0 auto;
         background-color:rgba(0,0,0,0.15);
         border-radius: 1rem;
+    }
+    .contact_bar {
+        margin: 0 auto;
+        height:120px;
+        width:670px;
+        overflow: hidden;
+    }
+    .contact_element {
+        width:100px;
+        height:100px;
+        margin: 0 33px;
+        float:left;
+    }
+    .anim_kitt {
+        width: 670px;
     }
 }
 @media screen and (min-width : 1px) and  (max-width : 992px) {
@@ -490,6 +546,21 @@ body{
         margin: 0 auto;
         background-color:rgba(0,0,0,0.15);
         border-radius: 1rem;
+    }
+    .contact_bar {
+        margin: 0 auto;
+        height:120px;
+        width:530px;
+        overflow: hidden;
+    }
+    .contact_element {
+        width:100px;
+        height:100px;
+        margin: 0 16px;
+        float:left;
+    }
+    .anim_kitt {
+        width: 530px;
     }
 }
 
