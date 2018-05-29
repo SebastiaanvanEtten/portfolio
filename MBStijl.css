@@ -77,6 +77,19 @@ body, html {
     background-image: url('backgrounds/bg5.jpg');
 }
 
+.mobilegame_bg_img {
+    background-image: url('mobilegame1.jpg');
+}
+.gameshop_bg_img {
+    background-image: url('gameshop1.jpg');
+}
+.explordam_bg_img {
+    background-image: url('explordam1.jpg');
+}
+.vergewijk_bg_img {
+    background-image: url('vergewijk1.jpg');
+}
+
 .background_config{
     width: 100%;
     min-height: calc(100% - 100px);
@@ -95,7 +108,7 @@ body, html {
     color:black;
     width:100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 75px 0;
 }
 .profiel_foto {
     border-radius: 100%;
@@ -145,4 +158,41 @@ body, html {
     background-color:rgba(255,255,255,0.05);
     width:100%;
     padding: .5rem 1rem;
+}
+
+.project_box_outside {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+.project_bg_config {
+    width: 100%;
+    height: 350px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.project_box_text {
+    background-color:rgba(255,255,255,0.95);
+    color:black;
+    width:100%;
+    padding: .5rem 1rem;
+    font-size: 2em;
+    text-align: center;
+}
+h4 b {
+    font-size: 2em;
+}
+
+.youtube_container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.youtube_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
