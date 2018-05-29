@@ -82,13 +82,12 @@ body, html {
 }
 
 .background_config{
-    width:100%;
+    width: 100%;
     min-height: calc(100% - 100px);
-    -moz-background-size: auto;
-    -webkit-background-size: auto;
-    background-attachment: scroll;
-    background-position: top;
-    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .vertical_align {
     position: absolute;
