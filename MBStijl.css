@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "TitleFont";
+    src:url("Title.ttf");
+    unicode-range: U+0041-007A;
+}
+@font-face {
+    font-family: "ThinFont";
+    src:url("Thin.ttf");
+    unicode-range: U+0041-007A;
+}
+.loader {
+    border: 16px solid #d1d1d1;
+    border-top: 16px solid #464646;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-left: calc(50vw - 60px);
+    margin-top: calc(50vh - 60px);
+    animation: spin 1s linear infinite;
+    z-index:9999999999;
+}
+.language_button {
+    background-color:rgba(0,0,0,0.4);
+    border-radius: .25rem;
+    padding: .25rem .5rem;
+    cursor: pointer;
+}
+.HL {
+    text-decoration: underline;
+    font-weight: bold;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+a:link {
+    text-decoration: none;
+    color: rgb(148, 148, 255);
+}
+a:visited {
+    color:rgb(148, 148, 255);
+}
+a:hover {
+    color: rgb(112, 112, 255);
+}
+a:active {
+    color: rgb(215, 215, 255);
+}
+
+p {
+    font-size:18px;
+}
+
+.black_text{
+    color:black;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    background-color:white;
+    color:white;
+    font-family: TitleFont, Arial, Helvetica, sans-serif;
+}
+
+
+.home_bg_img{
+    background-image: url('backgrounds/bg1.jpg');
+}
+.about_bg_img{
+    background-image: url('backgrounds/bg2.jpg');
+}
+.projects_bg_img{
+    background-image: url('backgrounds/bg3.jpg');
+}
+.skills_bg_img{
+    background-image: url('backgrounds/bg4.jpg');
+}
+.contact_bg_img{
+    background-image: url('backgrounds/bg5.jpg');
+}
+
+.background_config{
+    width:100%;
+    min-height: calc(100% - 100px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.vertical_align {
+    position: absolute;
+    width:100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.title_area {
+    color:black;
+    width:100%;
+    text-align: center;
+    padding: 25px 0;
+}
+.profiel_foto {
+    border-radius: 100%;
+    width: 200px;
+    height:200px;
+    margin: 5vh;
+    transition: 0.3s ease;
+}
+.home_screen_offset_line {
+    height:100px;margin-top:5rem;
+}
+
+.header_button{
+    padding: 2rem 1rem;
+    margin: 0px 2.5vw;
+    text-align: center;
+    font-family: 'Thinfont';
+    font-size: 24px;
+    margin-top: 1.25rem;
+    transition: 0.1s ease;
+    display:inline-block;
+    animation: hover 1.25s ease infinite;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0px);
+    }
+    35% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
