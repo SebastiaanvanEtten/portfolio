@@ -189,6 +189,22 @@ body, html {
 h4 b {
     font-size: 2em;
 }
+td {
+    font-size: 1.8em;
+}
+.Mobfont {
+    font-size: 2em;
+}
+
+.skill_logo {
+    width: 15%;
+    margin-bottom: 1rem;
+}
+
+.contact_icon {
+    width: 100px;
+    margin: 1rem;
+}
 
 .youtube_container {
     position: relative;
