@@ -63,7 +63,9 @@ body, html {
 }
 
 .max-modal {
-    max-width: 98vw !important;
+    max-width: 98% !important;
+    width: 98% !important;
+    min-width: 98% !important;
 }
 
 .home_bg_img{
