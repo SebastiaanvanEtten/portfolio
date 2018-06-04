@@ -61,6 +61,11 @@ body, html {
     color:white;
     font-family: TitleFont, Arial, Helvetica, sans-serif;
 }
+
+.max-modal {
+    max-width: 98vw !important;
+}
+
 .home_bg_img{
     background-image: url('backgrounds/bg1.jpg');
 }
